@@ -18,7 +18,8 @@ const App = () => {
         }
         let str1 = name1;
         let str2 = name2;
-        for (let t in str1) {
+        for (let t of str1) {
+            console.log(t);
             if (str2.includes(t)) {
                 str1 = str1.replace(t, "");
                 str2 = str2.replace(t, "");
@@ -27,6 +28,7 @@ const App = () => {
         setName1(str1);
         setName2(str2);
         setBtnClicked(true);
+        console.log(name1, name2, str1, str2);
         setRelationship(arr[(str1.length + str2.length) % 6]);
     }
 
